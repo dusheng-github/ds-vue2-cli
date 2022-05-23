@@ -20,13 +20,17 @@ module.exports = {
     rules: [
       {
         test: /\.js$/,
-        loader: 'babel-loader'
+        loader: 'babel-loader',
+        exclude: /node_modules/,
+        options: {
+          cacheDirectory: true,
+        }
       },
       {
         test: /\.(png|jpe?j|gif|svg)(\?.*)?$/,
         loader: 'url-loader',
         options: {
-          limit: 10000,
+          limit: 500,
           esModule: false,
           name: process.env.NODE_ENV === 'production' ? 'img/[name].[hash].[ext]' : 'img/[name].[ext]'
         }
@@ -37,7 +41,7 @@ module.exports = {
         test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
         loader: 'url-loader',
         options: {
-          limit: 10000,
+          limit: 500,
           name: process.env.NODE_ENV === 'production' ? 'fonts/[name].[hash].[ext]' : 'fonts/[name].[ext]'
         }
       },

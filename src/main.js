@@ -1,11 +1,9 @@
 import Vue from 'vue'
-import App from './App.vue'
 import store from './store'
 import router from './router'
 import './api/http'
 import './components/index.less'
 import './styles/iconfont/iconfont.css'
-// import 'element-ui/lib/theme-chalk/index.css'
 import mixin from './mixin/init'
 import '../MOCK'
 import {
@@ -87,6 +85,8 @@ import {
   Message,
   Notification
 } from 'element-ui'
+import 'element-ui/lib/theme-chalk/index.css'
+import App from './App.vue'
 
 // 执行组件的install方法, 调用Vue.component注入为全局变量
 Vue.use(Pagination)
