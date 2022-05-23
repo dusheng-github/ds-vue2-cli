@@ -5,11 +5,12 @@ module.exports = {
     es6: true,
     node: true,
   },
-  plugins: ['vue'],
+  plugins: ['vue', 'prettier'],
   extends: [
     'eslint:recommended',
     'plugin:vue/essential',
-    'prettier'
+    'prettier',
+    'plugin:vue/recommended',
   ],
   parserOptions: {
     ecmaVersion: 2018,
@@ -50,10 +51,10 @@ module.exports = {
     'switch-colon-spacing': ['error', { 'after': false, 'before': true }],
     'space-infix-ops': 'error',
     'wrap-iife': ['error', 'outside'],
-    'vue/require-default-prop': 'off',
-    'vue/require-valid-default-prop': 'off',
-    'vue/no-v-html': 'off',
-    'vue/singleline-html-element-content-newline': 'off',
-    'vue/multiline-html-element-content-newline': 'off'
+    // 'vue/require-default-prop': 'off',
+    // 'vue/require-valid-default-prop': 'off',
+    // 'vue/no-v-html': 'off',
+    // 'vue/singleline-html-element-content-newline': 'off',
+    // 'vue/multiline-html-element-content-newline': 'off'
   }
 }

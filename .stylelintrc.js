@@ -2,20 +2,19 @@ module.exports = {
   "processors": [],
   "plugins": ['stylelint-order'],
   "extends": [
-      "stylelint-config-standard",
-      "stylelint-config-recommended-vue",
+    "stylelint-config-recommended-vue",
+    "stylelint-config-standard",
   ],
   "overrides": [
     {
-        "files": ["*.vue", "**/*.vue"],
-        "rules": {
-            // "unit-allowed-list": ["em", "rem", "s"]
-        }
+        // "files": ["*.vue", "**/*.vue"],
+        files: ['**/*.{vue, html}'],
+        customSyntax: 'postcss-html'
     }
 ],
   ignoreFiles: ['**/*.js', '**/*.jsx', '**/*.tsx', '**/*.ts'],
     rules: {
-      indentation: 4,
+      indentation: 2,
       // 'prettier/prettier': [true, { singleQuote: false }],
       // at-rule-no-unknown: 屏蔽一些scss等语法检查
       'at-rule-no-unknown': [true, { ignoreAtRules: ['mixin', 'extend', 'content'] }], // 禁止使用未知的 at 规则

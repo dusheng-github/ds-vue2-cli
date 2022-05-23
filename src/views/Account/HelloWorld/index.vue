@@ -1,10 +1,20 @@
 <template>
-	<div class="tt">
-		hello world
-		<el-button type="primary" @click="request">代理请求</el-button>
-		<el-button type="primary" @click="mockReq">mock请求</el-button>
-		<tag >标签</tag>
-	</div>
+  <div class="tt">
+    hello world
+    <el-button
+      type="primary"
+      @click="request"
+    >
+      代理请求
+    </el-button>
+    <el-button
+      type="primary"
+      @click="mockReq"
+    >
+      mock请求
+    </el-button>
+    <tag>标签</tag>
+  </div>
 </template>
 
 <script>
@@ -14,10 +24,9 @@ import { getUserInfo, mockUserType } from '@api'
 export default {
   name: 'HelloWorld',
   components: {
-	  tag: Tag
+    tag: Tag
   },
   data() {
-	
     return {
       value1: true,
     }
@@ -42,7 +51,7 @@ export default {
 	color: green;
 	div {
 		width: 100px;
-        background: yellow;
+    background: yellow;
 		position: inherit;
 	}
 }

@@ -24,7 +24,6 @@ const COLOR_MAP = {
 }
 
 export default {
-  // eslint-disable-next-line vue/multi-word-component-names
   name: 'Tag',
 
   props: {

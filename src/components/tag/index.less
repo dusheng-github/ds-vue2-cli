@@ -1,40 +1,40 @@
 @import "../style/var";
 
 .van-tag {
-    display: inline-block;
-    padding: 0.2em 0.5em;
-    font-size: 10px;
-    line-height: normal;
-    color: @white;
-    border-radius: 0.2em;
+  display: inline-block;
+  padding: 0.2em 0.5em;
+  font-size: 10px;
+  line-height: normal;
+  color: @white;
+  border-radius: 0.2em;
+
+  &::after {
+    border-color: currentcolor;
+    border-radius: 0.4em;
+  }
+
+  &--mark {
+    padding-right: 0.6em;
+    border-radius: 0 0.8em 0.8em 0;
 
     &::after {
-        border-color: currentcolor;
-        border-radius: 0.4em;
+      border-radius: 0 1.6em 1.6em 0;
     }
+  }
 
-    &--mark {
-        padding-right: 0.6em;
-        border-radius: 0 0.8em 0.8em 0;
+  &--round {
+    border-radius: 0.8em;
 
-        &::after {
-            border-radius: 0 1.6em 1.6em 0;
-        }
+    &::after {
+      border-radius: 1.6em;
     }
+  }
 
-    &--round {
-        border-radius: 0.8em;
+  &--medium {
+    font-size: 12px;
+  }
 
-        &::after {
-            border-radius: 1.6em;
-        }
-    }
-
-    &--medium {
-        font-size: 12px;
-    }
-
-    &--large {
-        font-size: 14px;
-    }
+  &--large {
+    font-size: 14px;
+  }
 }
