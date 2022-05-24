@@ -51,10 +51,34 @@ module.exports = {
     'switch-colon-spacing': ['error', { 'after': false, 'before': true }],
     'space-infix-ops': 'error',
     'wrap-iife': ['error', 'outside'],
-    // 'vue/require-default-prop': 'off',
-    // 'vue/require-valid-default-prop': 'off',
-    // 'vue/no-v-html': 'off',
-    // 'vue/singleline-html-element-content-newline': 'off',
-    // 'vue/multiline-html-element-content-newline': 'off'
+    'vue/require-default-prop': 'off',
+    'vue/require-valid-default-prop': 'off',
+    'vue/no-v-html': 'off',
+    'vue/singleline-html-element-content-newline': 'off',
+    'vue/multiline-html-element-content-newline': 'off',
+    'vue/order-in-components': ['warn', {
+      'order': [
+        'el',
+        'name',
+        'key',
+        'parent',
+        'functional',
+        ['delimiters', 'comments'],
+        ['components', 'directives', 'filters'],
+        'extends',
+        'mixins',
+        'inheritAttrs',
+        'model',
+        ['props', 'propsData'],
+        'data',
+        'LIFECYCLE_HOOKS',
+        'computed',
+        'watch',
+        'methods',
+        ['template', 'render'],
+        'renderError'
+      ]
+    }]
+   
   }
 }
